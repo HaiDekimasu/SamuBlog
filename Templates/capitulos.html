@@ -1,0 +1,31 @@
+{% extends "layout/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Capitulos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <main>
+            {% block content %}
+            <div class="containercap">
+                {% for capitulo in capitulos %}
+                <div class="card">
+                    <div class="card-body">
+                        {% if capitulo.iframe_url %}
+                        <iframe src="{{ capitulo.iframe_url }}" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        {% endif %}
+                        <h5 class="card-title">{{ capitulo.title }}</h5>
+                        <p class="card-title">{{ capitulo.text }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endblock content %}
+        </main>
+    </body>
+</html>

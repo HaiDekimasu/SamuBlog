@@ -1,0 +1,39 @@
+{% extends "layout/base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        {% block content %}
+        <div class="containercap"> 
+            {% for x in mangas %}
+            <div class="card">  
+                <img src="{{ x.img.url }}" class="card-img-top" alt="{{ manga.title }}">
+                <div class="card-body">
+                    <br>
+                    <h5 class="card-title">{{ x.title }}</h5>
+                    <p class="card-title">{{ x.text }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="tomos">
+                <ul class="card">
+                    <li><a class="botonnav" href="{% url 'download-pdf' %}" target="_blank">Rurouni Kenshin - Tomo 01 (#001-008)</a></li>
+                    <li><a class="botonnav" href="{% url 'download2-pdf' %}" target="_blank">Rurouni Kenshin - Tomo 02 (#009-020)</a></li>
+                    <li><a class="botonnav" href="{% url 'download3-pdf' %}" target="_blank">Rurouni Kenshin - Tomo 03 (#021-028)</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        {% endblock content %}
+        <script src="" async defer></script>
+    </body>
+</html>

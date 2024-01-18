@@ -1,0 +1,16 @@
+{% extends "layout/base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle de producto</title>
+</head>
+<body>
+    {% block content %}
+        <h1>{{ product.name }}</h1>
+        <p>{{ product.descripcion }}</p>
+        <p>Precio: {{ product.price }}</p>
+        <p>Categoría: {{ product.category }}</p>
+    {% endblock content %}
+</body>
+</html>

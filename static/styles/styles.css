@@ -1,0 +1,184 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-image:url(/media/img/port01.jpg);
+    background-repeat: no-repeat;    
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+a{
+    list-style: none;
+}
+main{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* background-image: linear-gradient(to right,#220080,#630005,#59008dc2); */
+
+/*CONTENEDOR BARRA DE NAVEGACION_________________________________________________________________________________________*/
+.containernav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    background-image: linear-gradient(to right,#220080,#630005,#59008dc2);
+}
+/* CONTENEDOR DE CADA BOTON______________________________________________________________________________*/
+.nav-list {
+    --clr-font-main: hsla(0 0% 20% / 100);
+    --btn-bg-1: rgb(151, 0, 0);
+    --btn-bg-2: rgb(88, 2, 128);
+    --btn-bg-color: rgba(255, 255, 255, 0.514);
+    --radii: 0.5em;
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: var(--size, 1rem);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+    border: none;
+    border-radius: var(--radii);
+    color: var(--btn-bg-color);
+    box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+.nav-list:hover {
+    background-position: right top;
+}
+.nav-list:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+@media (prefers-reduced-motion: reduce) {
+    .nav-list {
+    transition: linear;
+    }
+}
+/*BOTONES___________________________________________________________________________*/
+.botonnav {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #e1bfff;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'Permanent Marker', cursive;
+}
+/*iNDEX.HTML___________________________________________________________________________*/
+
+.portini{
+    margin-top: 25%;
+    margin-bottom: 40%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #630005;
+    text-shadow: 0 0 10px #e1bfff;
+    font-size: 6rem;
+    font-family: 'Permanent Marker', cursive;
+}
+/*containercap_______________________________________________________________________*/
+.containercap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+.card{
+    margin-top: 3% !important;
+    margin-bottom: 3% !important;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    flex: 1;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to right,#220080,#630005,#59008dc2);
+}
+.card-body{
+    padding-top: 2%;
+    display: contents;
+}
+.card-title{
+    color: #e1bfff;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card video{
+    width: 96%;
+    margin-bottom: 2%;
+    height: auto;
+}
+/*CONTAINER MANGA____________________________________________________________________________*/
+.card img{
+    width: 50%;
+    height: auto;
+}
+.tomos{
+    width:100% ;
+}
+
+/*FOOTER___________________________________________________________________________*/
+
+.containerfooter{
+    display: flex;
+    position: relative;
+    bottom: 0 !important;
+    height: auto;
+    width: 100%;
+    max-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(to right,#220080,#630005,#59008dc2);
+}
+.containerfooter p{
+    color: #e1bfff;
+}
+.containerfooter h5{
+    color: #e1bfff;
+}
+.containerfooter a{
+    color: #c28cf193;
+    text-decoration: none;
+    font-size: large;
+}
+.containerfooter li{
+    list-style-type: none;
+}
+.copifooter{
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    color: #e1bfff;
+}
+.containerfooter ul{
+    padding-left: 0 !important;
+}
+.linkf{
+    text-decoration: none;
+    color: #c28cf193 !important;
+    width: 30%;
+    max-width: 100%;
+    font-family: 'Permanent Marker', cursive;
+}
