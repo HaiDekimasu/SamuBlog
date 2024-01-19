@@ -14,17 +14,17 @@
     <body>
         {% block content %}
         <div class="containercap"> 
-            {% for x in mangas %}
-            <div class="card">  
-                <img src="{{ x.img.url }}" class="card-img-top" alt="{{ manga.title }}">
-                <div class="card-body">
-                    <br>
-                    <h5 class="card-title">{{ x.title }}</h5>
-                    <p class="card-title">{{ x.text }}</p>
+                {% for x in mangas %}
+                <div class="card">  
+                    <img src="{{ x.img.url }}" class="card-img-top">
+                    <div class="card-body">
+                        <br>
+                        <h5 class="card-title">{{ x.title }}</h5>
+                        <p class="card-title">{{ x.text }}</p>
+                    </div>
                 </div>
-            </div>
-            {% endfor %}
-            <div class="tomos">
+                {% endfor %}
+                <div class="tomos">
                 <ul class="card">
                     <li><a class="botonnav" href="{% url 'download-pdf' %}" target="_blank">Rurouni Kenshin - Tomo 01 (#001-008)</a></li>
                     <li><a class="botonnav" href="{% url 'download2-pdf' %}" target="_blank">Rurouni Kenshin - Tomo 02 (#009-020)</a></li>
