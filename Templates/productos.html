@@ -1,21 +1,28 @@
 {% extends "layout/base.html" %}
 {% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Productos</title>
+    <title>Listado de productos</title>
 </head>
 <body>
     {% block content %}
-        <h1>Listado de productos</h1>
+    <h1>Listado de productos</h1>
+
+    {% if productos %}
         <ul>
-            {% for product in productos %}
+        {% for producto in productos %}
             <li>
-                <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> - {{ product.price }}
+            <a href="{% url 'product_detail' producto.id %}">
+                {{ producto.name }} - {{ producto.price }}
+            </a>
             </li>
-            {% endfor %}
+        {% endfor %}
         </ul>
-        
+    {% else %}
+        <p>No hay productos en esta categoría</p>
+    {% endif %}
     {% endblock content %}
 </body>
 </html>

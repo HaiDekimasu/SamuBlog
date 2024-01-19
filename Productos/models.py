@@ -8,6 +8,7 @@ def __str__(self):
     return self.name
     
 class Productos(models.Model):
+    image = models.ImageField(upload_to='product_images',default='default.jpg')
     name = models.CharField(max_length=255)
     descripcion = models.CharField(max_length=400)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
