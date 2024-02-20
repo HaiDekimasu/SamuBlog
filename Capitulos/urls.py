@@ -4,3 +4,4 @@ from . import views
 urlpatterns = [
     path('capitulos/', views.capitulos, name='capitulos'),
 ]
+
