@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Búsqueda de productos</h1>
+
+    <form action="" method="post">
+    <input type="text" name="q" placeholder="Nombre, categoría o precio" />
+
+    <input type="submit" value="Buscar" />
+    </form>
+
+    {% if productos %}
+    <ul>
+        {% for producto in productos %}
+        <li>
+            <a href="{% url 'product_detail' producto.id %}">
+                {{ producto.name }} - {{ producto.price }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No hay productos que coincidan con los criterios de búsqueda</p>
+    {% endif %}
+{% endblock content %}

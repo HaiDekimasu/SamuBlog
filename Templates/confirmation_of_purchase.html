@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Confirmación de compra</h1>
+
+    <p>Usuario: {{ usuario.username }}</p>
+
+    <ul>
+    {% for producto in productos %}
+        <li>
+        {{ producto.name }} - {{ producto.price }}
+        </li>
+    {% endfor %}
+    </ul>
+
+    <p>Total: {{ total }}</p>
+
+    <a href="/">Volver a la tienda</a>
+{% endblock content %}

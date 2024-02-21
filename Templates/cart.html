@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Carrito de compras</h1>
+
+    <ul>
+        {% for producto in productos %}
+        <li>
+        <a href="{% url 'product_detail' producto.id %}">
+            {{ producto.name }} - {{ producto.price }}
+        </a>
+
+        <input type="number" name="cantidad" value="{{ producto.cantidad }}" />
+
+        <a href="{% url 'delete_product_from_cart' producto.id %}">Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'checkout' %}">Realizar compra</a>
+{% endblock content %}
